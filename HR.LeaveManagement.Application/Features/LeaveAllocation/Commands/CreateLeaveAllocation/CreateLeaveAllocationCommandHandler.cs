@@ -11,10 +11,12 @@ namespace HR.LeaveManagement.Application.Features.LeaveAllocation.Commands.Creat
         private readonly ILeaveTypeRepository _leaveTypeRepository;
         private readonly IMapper _mapper;
 
-        public CreateLeaveAllocationCommandHandler(ILeaveAllocationRepository leaveAllocationRepository, IMapper mapper)
+        public CreateLeaveAllocationCommandHandler(ILeaveAllocationRepository leaveAllocationRepository,
+            IMapper mapper, ILeaveTypeRepository leaveTypeRepository)
         {
             _leaveAllocationRepository = leaveAllocationRepository;
             _mapper = mapper;
+            _leaveTypeRepository = leaveTypeRepository;
         }
 
         public async Task<Unit> Handle(CreateLeaveAllocationCommand request, CancellationToken cancellationToken)
