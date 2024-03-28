@@ -2,9 +2,9 @@
 
 namespace HR.LeaveManagement.Application.Features.LeaveRequest.Commands.ChangeLeaveRequest
 {
-    public class ChangeLeaveRequestCommandValidator : AbstractValidator<ChangeLeaveRequestApprovalCommand>
+    public class ChangeLeaveRequestApprovalCommandValidator : AbstractValidator<ChangeLeaveRequestApprovalCommand>
     {
-        public ChangeLeaveRequestCommandValidator()
+        public ChangeLeaveRequestApprovalCommandValidator()
         {
             RuleFor(q => q.Approved)
                 .NotNull()
