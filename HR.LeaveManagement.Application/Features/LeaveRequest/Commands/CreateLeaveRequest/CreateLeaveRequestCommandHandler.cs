@@ -38,8 +38,8 @@ namespace HR.LeaveManagement.Application.Features.LeaveRequest.Commands.CreateLe
             {
                 To = string.Empty,
                 Body = $"Your leave request for {request.StartDate:D} to {request.EndDate:D}" +
-            $" has been updated successfully",
-                Subject = "Leave request updated"
+            $" has been Created successfully",
+                Subject = "Leave request created"
             };
 
             await _emailSender.SendEmail(email);
