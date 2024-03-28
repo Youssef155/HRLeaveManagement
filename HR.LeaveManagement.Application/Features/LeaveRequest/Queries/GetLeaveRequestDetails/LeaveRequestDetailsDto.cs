@@ -13,7 +13,7 @@ namespace HR.LeaveManagement.Application.Features.LeaveRequest.Queries.GetLeaveR
         public DateTime DateActioned { get; set; }
         public string RequestComments { get; set; }
         public bool? Approved { get; set; }
-        public bool Canceled { get; set; }
+        public bool Cancelled { get; set; }
 
     }
 }
