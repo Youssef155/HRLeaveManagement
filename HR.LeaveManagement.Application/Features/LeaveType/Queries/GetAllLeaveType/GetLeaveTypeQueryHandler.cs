@@ -24,10 +24,10 @@ namespace HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveT
             this._logger = logger;
         }
 
-        async Task<List<LeaveTypeDto>> IRequestHandler<GetLeaveTypeQuery, List<LeaveTypeDto>>.Handle(GetLeaveTypeQuery request, CancellationToken cancellationToken)
+        public async Task<List<LeaveTypeDto>> Handle(GetLeaveTypeQuery request, CancellationToken cancellationToken)
         {
             var leaveType = await _leaveTypeRepository.GetAsync();
-            var data = _mapper.Map<List<LeaveTypeDto>> (leaveType);
+            var data = _mapper.Map<List<LeaveTypeDto>>(leaveType);
 
             _logger.LogInformation("Leave types were retrived succcessfully");
 
